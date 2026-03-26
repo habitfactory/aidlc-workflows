@@ -3,18 +3,18 @@
 # AI-DLC Workflow Installer
 #
 # Usage:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aws-samples/aidlc-workflows/main/scripts/install.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/habitfactory/aidlc-workflows/main/scripts/install.sh)"
 #
 # Options:
 #   --platform <name>   Platform to configure (claude-code, cursor, cline, q-developer, kiro, copilot)
 #   --ref <ref>         Git ref to install from (default: main)
-#   --repo <owner/repo> GitHub repository (default: aws-samples/aidlc-workflows)
+#   --repo <owner/repo> GitHub repository (default: habitfactory/aidlc-workflows)
 #   --help              Show this help message
 #
 set -euo pipefail
 
 # --- Configuration ---
-REPO="${AIDLC_REPO:-aws-samples/aidlc-workflows}"
+REPO="${AIDLC_REPO:-habitfactory/aidlc-workflows}"
 REF="${AIDLC_REF:-main}"
 PLATFORM=""
 
@@ -51,7 +51,7 @@ ${BOLD}Options:${NC}
                          kiro         - Kiro (.kiro/steering/)
                          copilot      - GitHub Copilot (.github/copilot-instructions.md)
   --ref <ref>         Git ref to install from (default: main)
-  --repo <owner/repo> GitHub repository (default: aws-samples/aidlc-workflows)
+  --repo <owner/repo> GitHub repository (default: habitfactory/aidlc-workflows)
   --help              Show this help message
 
 ${BOLD}Examples:${NC}
